@@ -13,7 +13,7 @@ public class Example_main {
         inventory.addClothe("0003", "Polo", "Black", "100", "Silk");
         inventory.addClothe("0004", "Prada", "White", "100", "Silk");
         
-        Clothe_Type searchType= new Clothe_Type("Polo", "Black","100", "Silk" );
+        Clothe_Type searchType= new Clothe_Type("Union", "Red", "100", "Silk");
         
 //        inventory.search(searchType);
         inventory.print(inventory.search(searchType));

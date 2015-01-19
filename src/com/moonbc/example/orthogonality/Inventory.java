@@ -20,7 +20,9 @@ public class Inventory {
     }
 
     public void addClothe(String serialNumber, String brandName, String color, String size, String fabric) {
-        Clothe clothe= new Clothe(serialNumber, brandName,color, size, fabric );
+        
+        Clothe_Type clothe_type = new Clothe_Type(brandName, color, size, fabric);
+        Clothe clothe= new Clothe(serialNumber,clothe_type );
         clothes.add(clothe);
     }
     
@@ -32,15 +34,9 @@ public class Inventory {
             Clothe clothe = i.next();
             Clothe_Type clothe_type = clothe.get_Type();
             
-            if(searchType.get_BrandName() != clothe_type.get_BrandName())
-                continue;
-            if(searchType.get_Color() != clothe_type.get_Color())
-                continue;
-            if(searchType.get_Fabric() != clothe_type.get_Fabric())
-                continue;
-            if(searchType.get_Size() != clothe_type.get_Size())
-                continue;
-            machingClothes.add(clothe);
+            if(clothe.get_Type().matches(searchType)) {
+                machingClothes.add(clothe);
+            }
         }
         
         

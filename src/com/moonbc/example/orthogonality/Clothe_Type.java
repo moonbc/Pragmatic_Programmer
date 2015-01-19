@@ -1,5 +1,7 @@
 package com.moonbc.example.orthogonality;
 
+import java.util.Iterator;
+
 public class Clothe_Type {
     private String _BrandName;
     private String _Color;
@@ -27,6 +29,26 @@ public class Clothe_Type {
 
     public String get_Fabric() {
         return _Fabric;
+    }
+    
+    
+    public boolean matches(Clothe_Type otherType) {
+        
+        
+        if(_BrandName != otherType.get_BrandName()) {
+            return false;
+        }else if(_Color != otherType.get_Color()) {
+            return false;
+        }else if(_Size != otherType.get_Size()) {
+            return false;
+        }else if(_Fabric != otherType.get_Fabric()) {
+            return false;
+        }
+        
+        return true;
+
+        
+        
     }
     
         
