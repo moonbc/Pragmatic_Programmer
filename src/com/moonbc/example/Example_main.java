@@ -7,6 +7,7 @@ import com.moonbc.example.simuduck.FlyBehavior;
 import com.moonbc.example.simuduck.FlyNoWay;
 import com.moonbc.example.simuduck.MallardDuck;
 import com.moonbc.example.weatherstation.CurrentConditionsDisplay;
+import com.moonbc.example.weatherstation.ForecastDisplay;
 import com.moonbc.example.weatherstation.WeatherData;
 
 public class Example_main {
@@ -27,7 +28,7 @@ public class Example_main {
         
         CurrentConditionsDisplay currentDisplay = 
             new CurrentConditionsDisplay(weatherData);
-        StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
+//        StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
 
         weatherData.setMeasurements(80, 65, 30.4f);
