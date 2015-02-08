@@ -9,6 +9,7 @@ import com.moonbc.example.simuduck.MallardDuck;
 import com.moonbc.example.starbuzzcoffee.Beverage;
 import com.moonbc.example.starbuzzcoffee.DarkRoast;
 import com.moonbc.example.starbuzzcoffee.Espresso;
+import com.moonbc.example.starbuzzcoffee.Mocha;
 import com.moonbc.example.weatherstation.CurrentConditionsDisplay;
 import com.moonbc.example.weatherstation.ForecastDisplay;
 import com.moonbc.example.weatherstation.WeatherData;
