@@ -1,6 +1,12 @@
 package com.moonbc.example;
 
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import com.moonbc.example.inputstream.LowerCaseInputStream;
 import com.moonbc.example.orthogonality.Main_Orthogonality;
 import com.moonbc.example.simuduck.Duck;
 import com.moonbc.example.simuduck.FlyBehavior;
@@ -39,16 +45,16 @@ public class Example_main {
 //        weatherData.setMeasurements(82, 70, 29.2f);
 //        weatherData.setMeasurements(78, 90, 29.2f);
        
-		Beverage beverage = new Espresso();
-		System.out.println(beverage.getDescription() 
-				+ " $" + beverage.cost());
- 
-		Beverage beverage2 = new DarkRoast();
-		beverage2 = new Mocha(beverage2);
-		beverage2 = new Mocha(beverage2);
-		beverage2 = new Whip(beverage2);
-		System.out.println(beverage2.getDescription() 
-				+ " $" + beverage2.cost());
+//		Beverage beverage = new Espresso();
+//		System.out.println(beverage.getDescription() 
+//				+ " $" + beverage.cost());
+// 
+//		Beverage beverage2 = new DarkRoast();
+//		beverage2 = new Mocha(beverage2);
+//		beverage2 = new Mocha(beverage2);
+//		beverage2 = new Whip(beverage2);
+//		System.out.println(beverage2.getDescription() 
+//				+ " $" + beverage2.cost());
 // 
 //		Beverage beverage3 = new HouseBlend();
 //		beverage3 = new Soy(beverage3); 
@@ -58,6 +64,16 @@ public class Example_main {
 //				+ " $" + beverage3.cost());
     	
     	
+    	
+    	try {
+			InputStream in = new LowerCaseInputStream(
+								new BufferedInputStream(
+									new FileInputStream("test.txt")));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    							
     	
     }
 }
